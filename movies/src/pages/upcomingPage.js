@@ -1,4 +1,4 @@
-import React,{useContext}from "react";
+import React from "react";
 import { getUpcomingMovies } from "../api/tmdb-api";
 import { useQuery } from "react-query";
 import PageTemplate from "../components/templateMovieListPage";
@@ -19,9 +19,6 @@ const UpcomingPage =(props)=>{
 
     const upcomingMovies=data.results;
 
-    const handleAction=()=>{
-        console.log("Action triggered");
-    }
 
 
     return(
