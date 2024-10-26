@@ -4,6 +4,7 @@ import { getPopularMovies } from "../api/tmdb-api";
 import Spinner from "../components/spinner";
 import PageTemplate from "../components/templateMovieListPage"
 import AddToFavoritesIcon from "../components/cardIcons/addToFavorites"
+import AddPlaylistIcon from "../components/cardIcons/addPlaylist";
 
 const PopularPage=() => {
     const {data,error,isLoading,isError} = useQuery(
@@ -24,7 +25,12 @@ const PopularPage=() => {
             title="Popular Movies"
             movies={popularMovies}
             action={(movie)=>{
-                return <AddToFavoritesIcon movie={movie}/>
+                return (
+                <>
+                    <AddToFavoritesIcon movie={movie}/>
+                    <AddPlaylistIcon movie={movie}/>
+
+                </>)
             }}
         />
     )
