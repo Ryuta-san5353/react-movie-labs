@@ -39,7 +39,7 @@ function ActorListPageTemplate({actors,title,actoin}){
                 departmentFilter={departmentFilter}
               />
             </Grid>
-            <ActorList action={action} movies={displaydActors}></ActorList>
+            <ActorList  movies={displayedActors}></ActorList>
           </Grid>
         </Grid>
       );

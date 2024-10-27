@@ -8,7 +8,7 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid2";
 import {Link} from "react-router-dom";
-import img from '../../images/actor-placeholder.png'
+import img from '../../images/film-poster-placeholder.png'
 
 const ActorCard = ({actor,action})=>{
     return (
@@ -43,7 +43,7 @@ const ActorCard = ({actor,action})=>{
                 </Grid>
             </CardContent>
             <CardActions disableSpacing>
-                {action(actor)}
+            {action ? action(actor) : null}
                 <Link to={`/actors/${actor.id}`}>
                     <Button variant="outlined" size="medium" color="primary">
                         More Info ...
