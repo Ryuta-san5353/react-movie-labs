@@ -13,30 +13,25 @@ import img from '../../images/film-poster-placeholder.png'
 const ActorCard = ({actor,action})=>{
     return (
         <Card>
-            <CardHeader>
+            <CardHeader
                 title={
                     <Typography variant="h5" component="p">
                         {actor.name}
                     </Typography>
                 }
-            </CardHeader>
-            <CardMedia>
+            />
+            <CardMedia
                 sx={{height:500}}
                 image={
           actor.profile_path
             ? `https://image.tmdb.org/t/p/w500/${actor.profile_path}`
             : img
         }
-            </CardMedia>
+            />
             <CardContent>
                 <Grid container>
                     <Grid size={{xs:6}}>
-                        <Typography variant="h6" component="p"> 
-                            Born on : {actor.birthday}
-                        </Typography>
-                    </Grid> 
-                    <Grid size={{xs:6}}>
-                        <Typography variant="h6" component="p">
+                        <Typography variant="h6" component="p" noWrap>
                             Known for :{actor.known_for_department}
                         </Typography>
                     </Grid>

@@ -15,6 +15,7 @@ const departments = [
     { id: "0", name: "All" },
     { id: "Acting", name: "Acting" },
     { id: "Directing", name: "Directing" },
+    { id: "Camera", name:"Camera"},
 ];
 
 const formControl={
