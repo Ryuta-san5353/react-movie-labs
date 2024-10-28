@@ -5,7 +5,7 @@ import FilterCard from "../filterActorsCard";
 import Grid from "@mui/material/Grid2";
 
 
-function ActorListPageTemplate({actors,title,actoin}){
+function ActorListPageTemplate({actors,title,action}){
     const[nameFilter,setNameFilter]=useState("");
     const [departmentFilter,setDepartmentFilter]=useState("0");
 
