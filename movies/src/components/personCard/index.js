@@ -9,6 +9,7 @@ import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid2";
 import {Link} from "react-router-dom";
 import img from '../../images/film-poster-placeholder.png'
+import WhatshotIcon from '@mui/icons-material/Whatshot';
 
 const ActorCard = ({actor,action})=>{
     return (
@@ -29,11 +30,18 @@ const ActorCard = ({actor,action})=>{
         }
             />
             <CardContent>
-                <Grid container>
+                <Grid container >
                     <Grid size={{xs:6}}>
-                        <Typography variant="h6" component="p" noWrap>
+                        <Typography variant="h6" component="p" >
                             Known for :{actor.known_for_department}
                         </Typography>
+                    </Grid>
+                    <Grid size={{xs:6}}>
+                        <Typography variant="h6" component="p">
+                        <WhatshotIcon fontSize="small" />
+                            Popularity:<br/>{actor.popularity}
+                        </Typography>
+
                     </Grid>
                 </Grid>
             </CardContent>
