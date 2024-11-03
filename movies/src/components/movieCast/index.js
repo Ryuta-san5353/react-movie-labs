@@ -10,7 +10,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Spinner from "../spinner";
 import { Typography } from "@mui/material";
 
-const MovieCastList=(movie)=>{
+const MovieCastList=({movie})=>{
 
     const {data,error,isLoading,isError}=useQuery(
         ["movieCredits",{id:movie.id}],
@@ -25,7 +25,7 @@ const MovieCastList=(movie)=>{
         return <h1>{error.message}</h1>
     }
     
-    const cast=data.cast.slice(0,10);
+    const cast=data.cast.slice(0,8);
 
     return(
         <div>
@@ -34,7 +34,7 @@ const MovieCastList=(movie)=>{
             </Typography>
             <Grid container>
                 {cast.map((actor)=>(
-                    <Grid key={actor.id}>
+                    <Grid item xs={6} sm={4} md={3} lg={3} key={actor.id}>
                         <Link to={`/actors/${actor.id}`}>
 
                         <Card
