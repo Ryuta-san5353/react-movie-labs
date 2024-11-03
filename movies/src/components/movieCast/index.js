@@ -41,7 +41,8 @@ const MovieCastList=({movie})=>{
                             sx={{
                                 height:"100%",
                                 display:"flex",
-                                flexDirectoin:"column",
+                                flexDirection:"column",
+                                
                             }}
                             >
                             <CardMedia
@@ -54,9 +55,12 @@ const MovieCastList=({movie})=>{
                                 }
                                 alt={actor.name}/>
                             <CardContent>
-                                <Typography variant="h6">
-                                    {`${actor.name} as ${actor.character}`}
-                                </Typography>
+                            <Typography variant="h6">
+                                {actor.name}
+                            </Typography>
+                            <Typography variant="body2" color="text.secondary">
+                                as {actor.character}
+                            </Typography>
                             </CardContent>
 
                         </Card>
