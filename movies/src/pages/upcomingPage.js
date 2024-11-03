@@ -4,6 +4,7 @@ import { useQuery } from "react-query";
 import PageTemplate from "../components/templateMovieListPage";
 import Spinner from "../components/spinner";
 import AddPlaylistIcon from "../components/cardIcons/addPlaylist";
+import CountdownTimerIcon from "../components/cardIcons/countdownTimer";
 
 const UpcomingPage =(props)=>{
 
@@ -26,7 +27,12 @@ const UpcomingPage =(props)=>{
             title="Upcoming Movies"
             movies={upcomingMovies}
             action={(movie)=>{
-                return <AddPlaylistIcon movie={movie}/>
+                return (
+                <>
+                <AddPlaylistIcon movie={movie}/>
+                <CountdownTimerIcon date={movie.release_date}/>
+                </>
+                )
             }}
         />
     )

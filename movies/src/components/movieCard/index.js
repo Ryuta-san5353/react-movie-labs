@@ -70,7 +70,7 @@ export default function MovieCard({movie,action}) {
           </Grid>
         </Grid>
       </CardContent>
-      <CardActions disableSpacing>
+      <CardActions disableSpacing sx={{gap:"4px"}}>
       
       {action(movie)}
     
