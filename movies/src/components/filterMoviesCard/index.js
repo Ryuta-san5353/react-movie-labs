@@ -101,8 +101,8 @@ export default function FilterMoviesCard(props) {
             value={props.sortBy}
             onChange={handleSortChange}>
               <MenuItem value="default">Default</MenuItem>
-              <MenuItem value="vote-asc">Vote(Low to High)</MenuItem>
-              <MenuItem value="vote-desc">Vote(High to Low)</MenuItem>
+              <MenuItem value="rating-asc">Rating(Low to High)</MenuItem>
+              <MenuItem value="rating-desc">Rating(High to Low)</MenuItem>
               <MenuItem value="date-asc">Release Date(Older)</MenuItem>
               <MenuItem value="date-desc">Release Date(Newer)</MenuItem>
 

@@ -20,9 +20,9 @@ function MovieListPageTemplate({ movies, title, action }) {
 
     const sortMovies=(moviesToSort)=>{
       switch(sortBy){
-        case "vote-asc":
+        case "rating-asc":
           return [...moviesToSort].sort((a,b)=>a.vote_average-b.vote_average);
-        case "vote-desc":
+        case "rating-desc":
           return [...moviesToSort].sort((a,b)=>b.vote_average-a.vote_average);
         case "date-asc":
           return [...moviesToSort].sort((a,b)=>(new Date(a.release_date))-(new Date(b.release_date)));
