@@ -13,6 +13,7 @@ import img from '../../images/pexels-dziana-hasanbekava-5480827.jpg'
 import {getGenres} from "../../api/tmdb-api";
 import {useQuery} from "react-query";
 import Spinner from "../spinner"
+import { Menu } from "@mui/material";
 
 const formControl = 
   {
@@ -49,6 +50,10 @@ export default function FilterMoviesCard(props) {
   const handleGenreChange = (e) => {
     handleChange(e, "genre", e.target.value);
   };
+
+  const handleSortChange = (e)=>{
+    handleChange(e,"sort",e.target.value);
+  }
   return (
     <Card 
       sx={{
@@ -85,6 +90,21 @@ export default function FilterMoviesCard(props) {
                 </MenuItem>
               );
             })}
+          </Select>
+        </FormControl>
+        <FormControl sx={{...formControl}}>
+          <Select
+            labelId="sort-label"
+            id="sort-select"
+            defaultValue=""
+            value={props.sortBy}
+            onChange={handleSortChange}>
+              <MenuItem value="default">Default</MenuItem>
+              <MenuItem value="vote-asc">Vote(Low to High)</MenuItem>
+              <MenuItem value="vote-desc">Vote(High to Low)</MenuItem>
+              <MenuItem value="date-asc">Release Date(Older)</MenuItem>
+              <MenuItem value="date-desc">Release Date(Newer)</MenuItem>
+
           </Select>
         </FormControl>
       </CardContent>
