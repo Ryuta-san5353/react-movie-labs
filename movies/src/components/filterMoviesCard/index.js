@@ -93,6 +93,7 @@ export default function FilterMoviesCard(props) {
           </Select>
         </FormControl>
         <FormControl sx={{...formControl}}>
+          <InputLabel id="sort-label">Sort</InputLabel>
           <Select
             labelId="sort-label"
             id="sort-select"

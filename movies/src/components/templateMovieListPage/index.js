@@ -21,13 +21,13 @@ function MovieListPageTemplate({ movies, title, action }) {
     const sortMovies=(moviesToSort)=>{
       switch(sortBy){
         case "vote-asc":
-          return [...movies].sort((a,b)=>a.vote_average-b.vote_average);
+          return [...moviesToSort].sort((a,b)=>a.vote_average-b.vote_average);
         case "vote-desc":
-          return [...movies].sort((a,b)=>b.vote_average-a.vote_average);
+          return [...moviesToSort].sort((a,b)=>b.vote_average-a.vote_average);
         case "date-asc":
-          return [...movies].sort((a,b)=>(new Date(a.release_date))-(new Date(b.release_date)));
+          return [...moviesToSort].sort((a,b)=>(new Date(a.release_date))-(new Date(b.release_date)));
         case "date-desc":
-          return [...movies].sort((a,b)=>(new Date(b.release_date))-(new Date(a.release_date)));
+          return [...moviesToSort].sort((a,b)=>(new Date(b.release_date))-(new Date(a.release_date)));
         default: 
           return moviesToSort;
 
