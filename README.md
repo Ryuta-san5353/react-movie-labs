@@ -13,6 +13,7 @@ Name: [Ryuta Ikejiri]
 + Added countdown timer on the movie card in the upcoming movies
 + Created the actors list page. 
 + Added the movie credits in the movie detail page. It shows the picture of the first 8 actors got from the movie credit endpoint . Also , by cliking the actor it goes to the actor actor detail page. 
++ Created a function to sort movies. This can be sorted by the average number of votes in order of highest to lowest, also by the date the movie was released in order of newest to oldest.
 
 
 
