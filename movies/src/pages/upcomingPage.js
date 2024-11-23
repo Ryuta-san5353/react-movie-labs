@@ -13,7 +13,7 @@ const UpcomingPage =(props)=>{
     const {  data, error, isLoading, isError }  = useQuery({
         queryKey:["upcoming",page],
         queryFn:()=>getUpcomingMovies(page),
-      });
+    });
 
     if(isLoading){
         return <Spinner/>
@@ -25,7 +25,7 @@ const UpcomingPage =(props)=>{
 
     const handlePageChange=(event,value)=>{
         setPage(value)
-      }
+    }
     const upcomingMovies=data.results;
 
 

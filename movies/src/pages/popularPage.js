@@ -12,7 +12,7 @@ const PopularPage=() => {
     const {  data, error, isLoading, isError }  = useQuery({
         queryKey:["popular",page],
         queryFn:()=>getPopularMovies(page),
-      });
+    });
 
     if(isLoading){
         return <Spinner />
@@ -22,7 +22,7 @@ const PopularPage=() => {
     }
     const handlePageChange=(event,value)=>{
         setPage(value)
-      }
+    }
     const popularMovies=data.results;
 
 

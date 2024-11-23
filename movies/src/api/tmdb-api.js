@@ -100,9 +100,9 @@ export const getMovie = (args) => {
     });
   }
 
-  export const getPopularActors = ()=>{
+  export const getPopularActors = (page=1)=>{
     return fetch(
-      `https://api.themoviedb.org/3/person/popular?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&page=1`
+      `https://api.themoviedb.org/3/person/popular?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&page=${page}`
     ).then((response)=>{
       if(!response.ok){
         throw new Error(response.json().message);
