@@ -5,7 +5,7 @@ Name: [Ryuta Ikejiri]
 
 ## Overview.
 
-[A brief statement on the content of this repository.]
+A React web application using TMDB API and Material-UI to display and manage movie and actor information.
 
 ### Features.
 [ A bullet-point list of the __new features__ you added to the Movies Fan app (and any modifications to existing features) .]
@@ -25,7 +25,7 @@ Name: [Ryuta Ikejiri]
 
 ## Setup requirements.
 
-[ Outline any non-standard setup steps necessary to run your app locally after cloning the repo.]
+
 
 ## API endpoints.
 
@@ -42,14 +42,19 @@ Name: [Ryuta Ikejiri]
 
 [ List the __new routes__ supported by your app and state the associated page.]
 
-+ /blogs - displays all published blogs.
 + /actors - shows the actors list.
 + /actors/:id - detail page of the actor
++ /movies/popular - display popular movies
 
 [If relevant, state what aspects of your app are protected (i.e. require authentication) and what is public.]
 
 ## Independent learning (If relevant).
 
-Itemize the technologies/techniques you researched independently and adopted in your project, 
-i.e. aspects not covered in the lectures/labs. Include the source code filenames that illustrate these 
-(we do not require code excerpts) and provide references to the online resources that helped you (articles/blogs).
++ Learned how to calculate the difference between two dates using the Date object in javascript. When substracting two Date objects, the result will be returned in milliseconds. To calculate the difference in days, the result can be divided by the number of milliseconds in a day(86400000milliseconds). This technique was applied to create a countdown timer for upcoming movies.
+
++ Learned how to use Javascript's sort method to customize sorting for the movie list. Created new sorting options to arrange movies by rating and release dates. 
+
++ Adoped new Material UI components. Pagination component for managing multile pages of data and used the AccessTimeIcon component to represent countdown timer.
+
++ Learned how to manage pagination state using useState hook. A page state variable was used to track the current selected page and updating it through the pagination component fetched data for that page from the API. This makess navigating between pages like movie or actor lists. I referred to online articles and to understand how to set up pagination.
+https://dev.to/donsmog/data-fetching-with-react-query-and-typescript-using-the-movie-database-api-4ddg
